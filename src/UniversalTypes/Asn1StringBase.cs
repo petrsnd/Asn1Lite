@@ -1,8 +1,8 @@
 ﻿namespace Petrsnd.Asn1Lite.UniversalTypes
 {
-    public class Asn1StringBase : Asn1Object
+    public abstract class Asn1StringBase : Asn1Object
     {
-        public Asn1StringBase(int tag, byte[] value) : base(tag)
+        protected Asn1StringBase(int tag, byte[] value) : base(tag)
         {
             Value = value;
         }

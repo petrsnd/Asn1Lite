@@ -1,29 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Petrsnd.Asn1Lite.Ber
 {
     public class BerLength
     {
-        public static BerLength Read(byte[] data, ref int index)
-        {
-            if (index >= data.Length)
-                throw new Exception("ASN.1 parsing exception, index out of bounds reading length");
-            var len = new BerLength(new[] { data[index] });
-            if (len.IsIndefinite || len.IsShortForm)
-            {
-                index++;
-                return len;
-            }
-            var numBytes = data[0] & 0x7f;
-            if (index + numBytes >= data.Length)
-                throw new Exception("ASN.1 parsing exception, index out of bounds reading length");
-            len = new BerLength(data.Skip(index).Take(numBytes + 1).ToArray());
-            index += (numBytes + 1);
-            return len;
-        }
-
         public static BerLength Indefinite()
         {
             return new BerLength(new byte[] { 0x80 });
@@ -34,7 +15,7 @@ namespace Petrsnd.Asn1Lite.Ber
         public BerLength(byte[] lengthData)
         {
             if (lengthData == null || lengthData.Length < 1)
-                throw new Exception("ASN.1 parsing exception, length data cannot be empty or null--replace me with concrete type");
+                throw new BerParseException("Parser BER length data cannot be empty or null");
             _lengthData = lengthData;
         }
 

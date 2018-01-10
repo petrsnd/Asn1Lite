@@ -2,9 +2,9 @@
 
 namespace Petrsnd.Asn1Lite.UniversalTypes
 {
-    public class Asn1TimeBase : Asn1Object
+    public abstract class Asn1TimeBase : Asn1Object
     {
-        public Asn1TimeBase(int tag, DateTime value) : base(tag)
+        protected Asn1TimeBase(int tag, DateTime value) : base(tag)
         {
             Value = value;
         }

@@ -1,12 +1,11 @@
-﻿namespace Petrsnd.Asn1Lite.UniversalTypes
-{
-    public class Asn1Sequence : Asn1Object
-    {
-        public Asn1Sequence(Asn1Object[] value) : base((int)Asn1UniversalTagNumber.Sequence)
-        {
-            Value = value;
-        }
+﻿using System.Collections.Generic;
 
-        public Asn1Object[] Value { get; }
+namespace Petrsnd.Asn1Lite.UniversalTypes
+{
+    public class Asn1Sequence : Asn1StructuredTypeBase
+    {
+        public Asn1Sequence(Asn1Object[] value) : base((int)Asn1UniversalTagNumber.Sequence, value)
+        {
+        }
     }
 }

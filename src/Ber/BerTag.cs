@@ -1,40 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace Petrsnd.Asn1Lite.Ber
 {
     public class BerTag
     {
-        public static BerTag Read(byte[] data, ref int index)
-        {
-            if (index >= data.Length)
-                throw new Exception("ASN.1 parsing exception, index out of bounds reading tag");
-            var tag = new BerTag(new[] { data[index] });
-            if (tag.IsLowForm)
-            {
-                index++;
-                return tag;
-            }
-            for (var i = 1; i < data.Length; i++)
-            {
-                if (index + i >= data.Length)
-                    throw new Exception("ASN.1 parsing exception, index out of bounds reading tag");
-                if ((data[index + i] & 0x80) != 0)
-                    continue;
-                tag = new BerTag(data.Skip(index).Take(i).ToArray());
-                index += 1;
-                return tag;
-            }
-            throw new Exception("ASN.1 parsing exception, can't find tag--replace me with concrete type");
-        }
-
         private readonly byte[] _tagData;
 
         public BerTag(byte[] tagData)
         {
             if (tagData == null || tagData.Length < 1)
-                throw new Exception("ASN.1 parsing exception, tag data cannot be empty or null--replace me with concrete type");
+                throw new BerParseException("BER tag data cannot be empty or null");
             _tagData = tagData;
         }
 

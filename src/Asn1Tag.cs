@@ -10,7 +10,7 @@
 
     public enum Asn1UniversalTagNumber
     {
-        EndOfContent = 0,
+        EndOfContents = 0,
         Boolean = 1,
         Integer = 2,
         BitString = 3,
