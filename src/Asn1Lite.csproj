@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Petrsnd.Asn1Lite</RootNamespace>
+    <AssemblyName>Petrsnd.Asn1Lite</AssemblyName>
   </PropertyGroup>
 
 </Project>
