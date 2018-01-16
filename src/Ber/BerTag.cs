@@ -2,7 +2,7 @@
 
 namespace Petrsnd.Asn1Lite.Ber
 {
-    public class BerTag
+    internal class BerTag
     {
         private readonly byte[] _tagData;
 

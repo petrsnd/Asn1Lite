@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Petrsnd.Asn1Lite.UniversalTypes
+﻿namespace Petrsnd.Asn1Lite.UniversalTypes
 {
     public class Asn1Set : Asn1StructuredTypeBase
     {

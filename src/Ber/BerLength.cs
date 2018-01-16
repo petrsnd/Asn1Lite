@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace Petrsnd.Asn1Lite.Ber
 {
-    public class BerLength
+    internal class BerLength
     {
         public static BerLength Indefinite()
         {
@@ -15,7 +14,7 @@ namespace Petrsnd.Asn1Lite.Ber
         public BerLength(byte[] lengthData)
         {
             if (lengthData == null || lengthData.Length < 1)
-                throw new BerParseException("Parser BER length data cannot be empty or null");
+                throw new BerParseException("Decoder BER length data cannot be empty or null");
             _lengthData = lengthData;
         }
 
