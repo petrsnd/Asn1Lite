@@ -41,14 +41,10 @@ namespace Petrsnd.Asn1Lite.Ber.Decoders
         }
 
         /*
-         case Asn1UniversalTagNumber.BitString:
-         case Asn1UniversalTagNumber.ObjectIdentifier:
          case Asn1UniversalTagNumber.ObjectDescriptor:
          case Asn1UniversalTagNumber.External:
-         case Asn1UniversalTagNumber.Real:
          case Asn1UniversalTagNumber.EmbeddedPdv:
          case Asn1UniversalTagNumber.Utf8String:
-         case Asn1UniversalTagNumber.RelativeOid:
          case Asn1UniversalTagNumber.Sequence:
          case Asn1UniversalTagNumber.Set:
          case Asn1UniversalTagNumber.NumericString:

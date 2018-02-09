@@ -3,7 +3,7 @@ using Petrsnd.Asn1Lite.UniversalTypes;
 
 namespace Petrsnd.Asn1Lite.Ber.Decoders
 {
-    class BerBitStringDecoder : IBerUniversalDecoder
+    internal class BerBitStringDecoder : IBerUniversalDecoder
     {
         public Asn1UniversalTagNumber GetTagNumber()
         {

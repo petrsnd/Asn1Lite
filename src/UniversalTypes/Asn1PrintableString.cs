@@ -2,6 +2,10 @@
 {
     public class Asn1PrintableString : Asn1StringBase
     {
+        public Asn1PrintableString() : base((int)Asn1UniversalTagNumber.PrintableString)
+        {
+        }
+
         public Asn1PrintableString(byte[] value) : base((int)Asn1UniversalTagNumber.PrintableString, value)
         {
         }

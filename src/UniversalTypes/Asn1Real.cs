@@ -2,11 +2,11 @@
 {
     public class Asn1Real : Asn1Object
     {
-        public Asn1Real(decimal value) : base((int)Asn1UniversalTagNumber.Real)
+        public Asn1Real(double value) : base((int)Asn1UniversalTagNumber.Real)
         {
             Value = value;
         }
 
-        public decimal Value { get; }
+        public double Value { get; }
     }
 }
