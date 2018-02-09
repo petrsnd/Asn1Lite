@@ -44,18 +44,13 @@ namespace Petrsnd.Asn1Lite.Ber.Decoders
          case Asn1UniversalTagNumber.ObjectDescriptor:
          case Asn1UniversalTagNumber.External:
          case Asn1UniversalTagNumber.EmbeddedPdv:
-         case Asn1UniversalTagNumber.Utf8String:
          case Asn1UniversalTagNumber.Sequence:
          case Asn1UniversalTagNumber.Set:
-         case Asn1UniversalTagNumber.NumericString:
-         case Asn1UniversalTagNumber.PrintableString:
          case Asn1UniversalTagNumber.T61String:
          case Asn1UniversalTagNumber.VideotexString:
-         case Asn1UniversalTagNumber.Ia5String:
          case Asn1UniversalTagNumber.UtcTime:
          case Asn1UniversalTagNumber.GeneralizedTime:
          case Asn1UniversalTagNumber.GraphicString:
-         case Asn1UniversalTagNumber.VisibleString:
          case Asn1UniversalTagNumber.GeneralString:
          case Asn1UniversalTagNumber.UniversalString:
          case Asn1UniversalTagNumber.CharacterString:
