@@ -13,5 +13,7 @@
         }
 
         public byte[] Value { get; }
+
+        public abstract string ValueAsString { get; }
     }
 }

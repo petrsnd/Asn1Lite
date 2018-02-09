@@ -1,4 +1,6 @@
-﻿namespace Petrsnd.Asn1Lite.UniversalTypes
+﻿using System.Text;
+
+namespace Petrsnd.Asn1Lite.UniversalTypes
 {
     public class Asn1UniversalString : Asn1StringBase
     {
@@ -9,5 +11,7 @@
         public Asn1UniversalString(byte[] value) : base((int)Asn1UniversalTagNumber.UniversalString, value)
         {
         }
+
+        public override string ValueAsString => Encoding.UTF32.GetString(Value);
     }
 }
