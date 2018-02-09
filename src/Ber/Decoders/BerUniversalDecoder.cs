@@ -42,7 +42,6 @@ namespace Petrsnd.Asn1Lite.Ber.Decoders
 
         /*
          case Asn1UniversalTagNumber.BitString:
-         case Asn1UniversalTagNumber.OctetString:
          case Asn1UniversalTagNumber.ObjectIdentifier:
          case Asn1UniversalTagNumber.ObjectDescriptor:
          case Asn1UniversalTagNumber.External:

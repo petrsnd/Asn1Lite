@@ -58,12 +58,25 @@ namespace Petrsnd.Asn1Lite.Ber
             return len;
         }
 
+        public static void PeekByte(byte[] data, int index)
+        {
+            PeekData(1, data, index);
+        }
+
         public static void PeekData(int numBytes, byte[] data, int index)
         {
             if (index >= data.Length)
                 throw new BerParseException("Decoder index out of bounds while reading data");
             if (index + numBytes >= data.Length)
                 throw new BerParseException($"Decoder index out of bounds while reading data, numBytes = {numBytes}");
+        }
+
+        public static byte ReadByte(byte[] data, ref int index)
+        {
+            PeekByte(data, index);
+            var b = data[index];
+            index += 1;
+            return b;
         }
 
         public static byte[] ReadData(int numBytes, byte[] data, ref int index)
