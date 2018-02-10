@@ -48,7 +48,6 @@ namespace Petrsnd.Asn1Lite.Ber.Decoders
          case Asn1UniversalTagNumber.Set:
          case Asn1UniversalTagNumber.T61String:
          case Asn1UniversalTagNumber.VideotexString:
-         case Asn1UniversalTagNumber.UtcTime:
          case Asn1UniversalTagNumber.GeneralizedTime:
          case Asn1UniversalTagNumber.GraphicString:
          case Asn1UniversalTagNumber.GeneralString:

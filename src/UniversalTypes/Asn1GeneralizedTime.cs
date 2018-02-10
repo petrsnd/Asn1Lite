@@ -7,5 +7,7 @@ namespace Petrsnd.Asn1Lite.UniversalTypes
         public Asn1GeneralizedTime(DateTime value) : base((int)Asn1UniversalTagNumber.GeneralizedTime, value)
         {
         }
+
+        public override string ValueAsString => Value.ToUniversalTime().ToString("yyyyMMddHHmmss.fffZ");
     }
 }

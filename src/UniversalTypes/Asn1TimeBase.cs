@@ -10,5 +10,7 @@ namespace Petrsnd.Asn1Lite.UniversalTypes
         }
 
         public DateTime Value { get; }
+
+        public abstract string ValueAsString { get; }
     }
 }

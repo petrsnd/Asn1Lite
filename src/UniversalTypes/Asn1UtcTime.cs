@@ -7,5 +7,7 @@ namespace Petrsnd.Asn1Lite.UniversalTypes
         public Asn1UtcTime(DateTime value) : base((int)Asn1UniversalTagNumber.UtcTime, value)
         {
         }
+
+        public override string ValueAsString => Value.ToUniversalTime().ToString("yyMMddHHmmssZ");
     }
 }
